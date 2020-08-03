@@ -23,6 +23,7 @@
     "@types/react-dom": "^16.9.8",
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^4.2.0",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "source-map-loader": "^1.0.1",
     "typescript": "^3.9.7",
