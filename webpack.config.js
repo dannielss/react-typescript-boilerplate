@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/components/index.tsx",
+  entry: ["react-hot-loader/patch","./src/components/index.tsx"],
   target: "web",
   mode: "development",
   output: {
