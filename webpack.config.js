@@ -12,11 +12,18 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
   },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, 'build'),
+    port: 3000,
+    hot: true,
+    overlay: true,
+  },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        loader: "awesome-typescript-loader",
+        loader: "ts-loader",
       },
       {
         enforce: "pre",
