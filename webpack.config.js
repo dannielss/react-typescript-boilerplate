@@ -9,24 +9,26 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, 'build'),
+    port: 3000,
+    open: true,
+    hot: true,
+    overlay: true,
+  },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
     alias: {
       'react-dom': '@hot-loader/react-dom',
     }
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: path.resolve(__dirname, 'build'),
-    port: 3000,
-    hot: true
-  },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        loader: "ts-loader",
+        test: /\.jsx?$|.tsx?$/,
         exclude: /node_modules/,
+        loader: 'babel-loader?cacheDirectory'
       },
       {
         enforce: "pre",
