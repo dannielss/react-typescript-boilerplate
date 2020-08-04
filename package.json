@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "start": "serve -n -s -l 3000 build",
+    "build": "webpack --config webpack.config.prod.js",
     "test:e2e": "npm-run-all -p start cypress:open",
     "cypress:open": "cypress open"
   },
@@ -44,6 +45,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hot-loader": "^4.12.21"
+    "react-hot-loader": "^4.12.21",
+    "serve": "^11.3.2"
   }
 }
