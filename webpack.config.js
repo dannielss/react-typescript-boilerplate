@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: ["react-hot-loader/patch","./src/components/index.tsx"],
+  entry: path.resolve(__dirname, "src/components/index.tsx"),
   target: "web",
   mode: "development",
   output: {
@@ -11,6 +11,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    }
   },
   devServer: {
     historyApiFallback: true,
