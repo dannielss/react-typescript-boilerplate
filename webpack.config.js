@@ -19,14 +19,14 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'build'),
     port: 3000,
-    hot: true,
-    overlay: true,
+    hot: true
   },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
         loader: "ts-loader",
+        exclude: /node_modules/,
       },
       {
         enforce: "pre",
