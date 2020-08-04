@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/components/index.tsx"),
-  target: "web",
   mode: "development",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
+  devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'build'),
@@ -29,11 +29,6 @@ module.exports = {
         test: /\.jsx?$|.tsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader?cacheDirectory'
-      },
-      {
-        enforce: "pre",
-        test: /\.js$/,
-        loader: "source-map-loader",
       },
       {
         test: /\.css$/,

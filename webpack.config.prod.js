@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/components/index.tsx"),
-  target: "web",
   mode: "production",
   output: {
     path: path.resolve(__dirname, "build"),
@@ -18,11 +17,6 @@ module.exports = {
         test: /\.jsx?$|.tsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader?cacheDirectory'
-      },
-      {
-        enforce: "pre",
-        test: /\.js$/,
-        loader: "source-map-loader",
       },
       {
         test: /\.css$/,
