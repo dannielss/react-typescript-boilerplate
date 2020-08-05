@@ -10,7 +10,7 @@
     "test:e2e": "npm-run-all -p start cypress:open",
     "cypress:open": "cypress open",
     "test": "jest --watch",
-    "storybook": "start-storybook -p 3001 -c storybook --docs"
+    "storybook": "start-storybook -p 3001 -c storybook"
   },
   "repository": {
     "type": "git",
@@ -30,8 +30,8 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
     "@hot-loader/react-dom": "^16.13.0",
-    "@storybook/addon-docs": "^5.3.19",
-    "@storybook/react": "^5.3.19",
+    "@storybook/addon-docs": "^6.0.0-rc.26",
+    "@storybook/react": "^6.0.0-rc.26",
     "@types/jest": "^26.0.8",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",

@@ -11,6 +11,7 @@
   "include": [
     "src",
     "typings",
-    "__tests__"
+    "__tests__",
+    "storybook/stories"
   ]
 }
