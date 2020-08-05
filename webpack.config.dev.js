@@ -18,7 +18,7 @@ module.exports = {
     overlay: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
+    extensions: [".js", ".jsx", ".json", ".ts", ".tsx", '.mdx'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
     }

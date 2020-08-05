@@ -9,7 +9,8 @@
     "build": "webpack --config webpack.config.prod.js",
     "test:e2e": "npm-run-all -p start cypress:open",
     "cypress:open": "cypress open",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "storybook": "start-storybook -p 3001 -c storybook --docs"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
     "@hot-loader/react-dom": "^16.13.0",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@types/jest": "^26.0.8",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
