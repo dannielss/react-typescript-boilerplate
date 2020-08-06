@@ -1,12 +1,12 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/components/index.tsx"),
-  mode: "development",
+  entry: path.resolve(__dirname, 'src/components/index.tsx'),
+  mode: 'development',
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   devServer: {
@@ -15,12 +15,12 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
-    overlay: true,
+    overlay: true
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".ts", ".tsx", '.mdx'],
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.mdx'],
     alias: {
-      'react-dom': '@hot-loader/react-dom',
+      'react-dom': '@hot-loader/react-dom'
     }
   },
   module: {
@@ -32,17 +32,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "css-loader",
+        loader: 'css-loader'
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
-      },
-    ],
+        loader: 'file-loader'
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "public", "index.html"),
-    }),
-  ],
-};
+      template: path.resolve(__dirname, 'src', 'public', 'index.html')
+    })
+  ]
+}

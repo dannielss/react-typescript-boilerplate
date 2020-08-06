@@ -6,12 +6,7 @@
     "preserveConstEnums": true,
     "removeComments": true,
     "target": "es5",
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
-  "include": [
-    "src",
-    "typings",
-    "__tests__",
-    "storybook/stories"
-  ]
+  "include": ["src", "typings", "__tests__", "storybook/stories"]
 }

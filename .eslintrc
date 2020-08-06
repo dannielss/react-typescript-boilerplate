@@ -1,0 +1,137 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["jest"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:jest/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".mdx"]
+      }
+    ],
+    "import/extensions": [
+      1,
+      {
+        "js": "never",
+        "jsx": "never",
+        "svg": "always",
+        "json": "always"
+      }
+    ],
+    "no-console": "off",
+    "react/jsx-props-no-spreading": "off",
+    "global-require": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "__tests__/*.*",
+          "storybook/*.*",
+          "typings/*.*",
+          "/*.*"
+        ]
+      }
+    ],
+    "react-hooks/exhaustive-deps": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/no-array-index-key": "off",
+    "no-irregular-whitespace": "off",
+    "prefer-promise-reject-errors": "off",
+    "eqeqeq": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
+    "no-new-func": "off",
+    "consistent-return": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {},
+      "webpack": {
+        "config": "webpack.config.dev.js"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": "**/*.+(md|mdx)",
+      "extends": ["plugin:mdx/recommended"]
+    },
+    {
+      "files": "**/*.+(ts|tsx)",
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "plugins": ["jest", "@typescript-eslint"],
+      "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "prettier",
+        "prettier/react",
+        "prettier/@typescript-eslint"
+      ],
+      "rules": {
+        "import/extensions": [
+          1,
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never",
+            "svg": "always",
+            "json": "always"
+          }
+        ],
+        "no-console": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "global-require": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": [
+              "storybook/*.*",
+              "__test__/*.*",
+              "typings/*.*",
+              "/*.*"
+            ]
+          }
+        ],
+        "react-hooks/exhaustive-deps": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/no-array-index-key": "off",
+        "no-irregular-whitespace": "off",
+        "prefer-promise-reject-errors": "off",
+        "spaced-comment": "off",
+        "eqeqeq": "off",
+        "no-restricted-syntax": "off",
+        "no-await-in-loop": "off",
+        "@typescript-eslint/no-implied-eval": "off",
+        "no-new-func": "off",
+        "consistent-return": "off",
+        "@typescript-eslint/naming-convention": ["off"]
+      }
+    }
+  ]
+}
