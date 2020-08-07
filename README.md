@@ -120,7 +120,7 @@ or using yarn
 # Build for web (compiled to build/)
 $ yarn build
 
-# Run for web production (needs npm run build first)
+# Run for web production (needs yarn build first)
 $ yarn start
 
 # Open storybook
