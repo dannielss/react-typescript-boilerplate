@@ -24,6 +24,7 @@
 - [Cypress](https://www.cypress.io/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [Commitizen](https://github.com/commitizen/cz-cli)
 
 ## :wrench: Configuration
 
@@ -112,6 +113,9 @@ $ npm run lint
 
 # Format all files with prettier
 $ npm run format
+
+# Commit using commitizen
+$ npm run commit
 ```
 
 or using yarn
@@ -131,4 +135,7 @@ $ yarn lint
 
 # Format all files with prettier
 $ yarn format
+
+# Commit using commitizen
+$ yarn commit
 ```
