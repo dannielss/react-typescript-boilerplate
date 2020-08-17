@@ -1,0 +1,119 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn add commitzen -D
+
+PATH: 
+  /home/daniel/.rvm/gems/ruby-2.6.3/bin:/home/daniel/.rvm/gems/ruby-2.6.3@global/bin:/home/daniel/.rvm/rubies/ruby-2.6.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/daniel/Android/Sdk/emulator:/home/daniel/Android/Sdk/tools:/home/daniel/Android/Sdk/tools/bin:/home/daniel/Android/Sdk/platform-tools:/home/daniel/Documentos/flutter/bin:/home/daniel/.rvm/bin:/home/daniel/Android/Sdk/emulator:/home/daniel/Android/Sdk/tools:/home/daniel/Android/Sdk/tools/bin:/home/daniel/Android/Sdk/platform-tools:/home/daniel/.rvm/bin:/home/daniel/Documentos/flutter/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  13.14.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/commitzen: Not found
+      at Request.params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66947:18)
+      at Request.self.callback (/usr/lib/node_modules/yarn/lib/cli.js:140665:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:141637:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "react-typescript-boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "webpack-dev-server --config webpack.config.dev.js",
+      "start": "serve -n -s -l 3000 build",
+      "build": "webpack --config webpack.config.prod.js",
+      "test:e2e": "npm-run-all -p dev cypress:open",
+      "test:e2e:run": "npm-run-all -p dev cypress:run",
+      "cypress:open": "cypress open",
+      "cypress:run": "cypress run",
+      "test": "jest --watch",
+      "storybook": "start-storybook -p 3001 -c storybook",
+      "lint": "eslint --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
+      "prettier": "prettier \"**/*.+(js|jsx|json|ts|tsx|md|mdx|html|eslintrc|prettierrc)\"",
+      "format": "yarn prettier --write",
+      "commit": "git add . && git-cz"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Daniels887/react-typescript-boilerplate.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Daniels887/react-typescript-boilerplate/issues"
+    },
+    "homepage": "https://github.com/Daniels887/react-typescript-boilerplate#readme",
+    "devDependencies": {
+      "@babel/core": "^7.11.0",
+      "@babel/plugin-proposal-class-properties": "^7.10.4",
+      "@babel/preset-env": "^7.11.0",
+      "@babel/preset-react": "^7.10.4",
+      "@babel/preset-typescript": "^7.10.4",
+      "@hot-loader/react-dom": "^16.13.0",
+      "@storybook/addon-docs": "^6.0.0-rc.26",
+      "@storybook/react": "^6.0.0-rc.26",
+      "@types/jest": "^26.0.8",
+      "@types/react": "^16.9.44",
+      "@types/react-dom": "^16.9.8",
+      "@typescript-eslint/eslint-plugin": "^3.8.0",
+      "@typescript-eslint/parser": "^3.8.0",
+      "babel-eslint": "^10.1.0",
+      "babel-jest": "^26.2.2",
+      "babel-loader": "^8.1.0",
+      "css-loader": "^4.2.0",
+      "cypress": "^4.12.0",
+      "eslint": "^7.2.0",
+      "eslint-config-airbnb": "^18.2.0",
+      "eslint-config-airbnb-typescript": "^9.0.0",
+      "eslint-config-prettier": "^6.11.0",
+      "eslint-plugin-import": "^2.22.0",
+      "eslint-plugin-jest": "^23.20.0",
+      "eslint-plugin-jsx-a11y": "^6.3.1",
+      "eslint-plugin-mdx": "^1.8.1",
+      "eslint-plugin-prettier": "^3.1.4",
+      "eslint-plugin-react": "^7.20.5",
+      "eslint-plugin-react-hooks": "^4.0.0",
+      "file-loader": "^6.0.0",
+      "html-webpack-plugin": "^4.3.0",
+      "jest": "^26.2.2",
+      "jest-watch-typeahead": "^0.6.0",
+      "npm-run-all": "^4.1.5",
+      "prettier": "^2.0.5",
+      "typescript": "^3.9.7",
+      "webpack": "^4.44.1",
+      "webpack-cli": "^3.3.12",
+      "webpack-dev-server": "^3.11.0"
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
+    },
+    "dependencies": {
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "react-hot-loader": "^4.12.21",
+      "serve": "^11.3.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
