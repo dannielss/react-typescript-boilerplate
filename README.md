@@ -25,6 +25,7 @@
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Commitizen](https://github.com/commitizen/cz-cli)
+- [Husky](https://github.com/typicode/husky)
 
 ## :wrench: Configuration
 
