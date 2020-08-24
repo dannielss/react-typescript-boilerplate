@@ -1,5 +1,5 @@
 import React from 'react'
-import App from '../../src/components/App'
+import App from '../../src/App'
 
 export default {
   title: 'Mdx/App',
