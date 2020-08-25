@@ -2,35 +2,36 @@ import React from 'react'
 import App from '../../src/App'
 
 export default {
-  title: 'Tsx/App',
+  title: 'MDX/App',
   component: App,
   argTypes: {
     name: {
       control: 'text',
       description: 'Text of h1',
       table: {
-        defaultValue: { summary: false }
+        defaultValue: { summary: '-' }
       }
     },
     color: {
       control: 'color',
       description: 'Color of h1',
       table: {
-        defaultValue: { summary: false }
+        defaultValue: { summary: '-' }
       }
     }
-  }
+  },
+  parameters: { layout: 'centered' }
 }
 
 const MyApp = (args: { name: string; color: string }) => <App {...args} />
 
-export const Basic = MyApp.bind({})
+export const teste = MyApp.bind({})
 
-Basic.args = { name: 'DANIELS', color: 'black' }
-Basic.parameters = {
+teste.args = { name: 'DANIELS', color: 'black' }
+teste.parameters = {
   docs: {
     source: {
-      code: `<App />`
+      code: `<App name="DANIELS" color="black"/>`
     }
   }
 }

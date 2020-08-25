@@ -1,3 +1,6 @@
 export const parameters = {
-  controls: { expanded: true }
+  controls: { expanded: true },
+  viewport: {
+    defaultViewport: 'responsive'
+  }
 }
