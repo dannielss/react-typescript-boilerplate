@@ -1,13 +1,49 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Preview
+} from '@storybook/addon-docs/blocks'
+import App from '../../src/App'
 
-<Meta title="MDX/Checkbox" />
+<Meta
+  title="MDX/App"
+  component={App}
+  argTypes={{
+    name: {
+      control: { type: 'text' },
+      description: 'Text of h1',
+      table: {
+        defaultValue: { summary: false }
+      }
+    },
+    color: {
+      control: { type: 'color' },
+      description: 'Color of h1',
+      table: {
+        defaultValue: { summary: false }
+      }
+    }
+  }}
+/>
 
-# Hi
+export const Template = (args) => <App {...args} />
 
-My example of storie
+# App
 
 <Preview>
-  <Story name="Hi">
-    <h1>Hi</h1>
+  <Story
+    name="app"
+    args={{
+      name: 'Daniel',
+      color: '#f00'
+    }}
+    parameters={{ docs: { source: { code: '<App />' } } }}
+  >
+    {Template.bind({})}
   </Story>
 </Preview>
+
+<ArgsTable story="app" />

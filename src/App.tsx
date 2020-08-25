@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { hot } from 'react-hot-loader/root'
 
-const App: React.FC = () => {
-  const [state, setState] = useState('Hi')
+interface IProps {
+  name: string
+  color: string
+}
 
-  return <h1>{state}</h1>
+const App: React.FC<IProps> = ({ name, color }) => {
+  return <h1 style={{ color }}>{name}</h1>
 }
 
 export default hot(App)
