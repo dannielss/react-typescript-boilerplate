@@ -26,6 +26,7 @@
 - [Prettier](https://prettier.io/)
 - [Commitizen](https://github.com/commitizen/cz-cli)
 - [Husky](https://github.com/typicode/husky)
+- [Serve](https://www.npmjs.com/package/serve)
 
 ## :wrench: Configuration
 
